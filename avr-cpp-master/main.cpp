@@ -39,9 +39,9 @@ int main()
 		//_delay_ms(1000);
 		//uart0 << _HEX(6543) << (char *) " ";
 	//	_delay_ms(200);
-	//	t_Timer2.get_timer(test);
+		t_Timer2.get_timer(test);
 	//	_delay_ms(200);
-		//uart0 << (char *) "Timer: " << _HEX(test) <<  (char *) " " << _DEC(test) << (char *) " ";
+		uart0 << (char *) "Timer: " << _HEX(test) <<  (char *) " " << _DEC(test) << (char *) " ";
 		//uart0 << _BIN(test)  <<  (char *) " " << _OCT(test);
 		_delay_ms(1000);
 		uart0 >> read_d;
