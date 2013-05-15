@@ -47,38 +47,38 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 LSS += \
-cpp002.lss \
+cpp004.lss \
 
 SIZEDUMMY += \
 sizedummy \
 
 
 # All Target
-all: cpp002.elf secondary-outputs
+all: cpp004.elf secondary-outputs
 
 # Tool invocations
-cpp002.elf: $(OBJS) $(USER_OBJS)
+cpp004.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C++ Linker'
-	avr-g++ -Wl,-Map,cpp002.map,--cref -mmcu=at90can128 -o "cpp002.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-g++ -Wl,-Map,cpp004.map,--cref -mmcu=at90can128 -o "cpp004.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-cpp002.lss: cpp002.elf
+cpp004.lss: cpp004.elf
 	@echo 'Invoking: AVR Create Extended Listing'
-	-avr-objdump -h -S cpp002.elf  >"cpp002.lss"
+	-avr-objdump -h -S cpp004.elf  >"cpp004.lss"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-sizedummy: cpp002.elf
+sizedummy: cpp004.elf
 	@echo 'Invoking: Print Size'
-	-avr-size --format=avr --mcu=at90can128 cpp002.elf
+	-avr-size --format=avr --mcu=at90can128 cpp004.elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C_DEPS)$(ELFS)$(LSS)$(S_DEPS)$(CXX_DEPS)$(S_UPPER_DEPS)$(C++_DEPS)$(ASM_DEPS)$(CC_DEPS)$(CPP_DEPS)$(C_UPPER_DEPS)$(SIZEDUMMY) cpp002.elf
+	-$(RM) $(OBJS)$(C_DEPS)$(ELFS)$(LSS)$(S_DEPS)$(CXX_DEPS)$(S_UPPER_DEPS)$(C++_DEPS)$(ASM_DEPS)$(CC_DEPS)$(CPP_DEPS)$(C_UPPER_DEPS)$(SIZEDUMMY) cpp004.elf
 	-@echo ' '
 
 secondary-outputs: $(LSS) $(SIZEDUMMY)

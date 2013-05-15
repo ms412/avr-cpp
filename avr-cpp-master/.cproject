@@ -52,6 +52,9 @@
 							<tool id="de.innot.avreclipse.tool.avrdude.app.debug.44073681" name="AVRDude" superClass="de.innot.avreclipse.tool.avrdude.app.debug"/>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="de.innot.avreclipse.configuration.app.debug.1767604569.1198893255" name="main.cpp" rcbsApplicability="disable" resourcePath="main.cpp" toolsToInvoke="de.innot.avreclipse.tool.cppcompiler.app.debug.948117616.300402797">
+						<tool id="de.innot.avreclipse.tool.cppcompiler.app.debug.948117616.300402797" name="AVR C++ Compiler" superClass="de.innot.avreclipse.tool.cppcompiler.app.debug.948117616"/>
+					</fileInfo>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -117,7 +120,14 @@
 		<project id="cpp002.de.innot.avreclipse.project.winavr.elf_2.1.0.234638002" name="AVR Cross Target Application" projectType="de.innot.avreclipse.project.winavr.elf_2.1.0"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/cpp004"/>
+		</configuration>
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/cpp004"/>
+		</configuration>
+	</storageModule>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.debug.1767604569;de.innot.avreclipse.configuration.app.debug.1767604569.;de.innot.avreclipse.tool.compiler.winavr.app.debug.663597420;de.innot.avreclipse.compiler.winavr.input.1157930942">

@@ -4,16 +4,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../device/uart0.cpp \
-../device/uart1.cpp 
+../device/gpio.cpp \
+../device/timer2.cpp \
+../device/uart0.cpp 
 
 OBJS += \
-./device/uart0.o \
-./device/uart1.o 
+./device/gpio.o \
+./device/timer2.o \
+./device/uart0.o 
 
 CPP_DEPS += \
-./device/uart0.d \
-./device/uart1.d 
+./device/gpio.d \
+./device/timer2.d \
+./device/uart0.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
