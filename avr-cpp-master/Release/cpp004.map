@@ -1,0 +1,562 @@
+Archive member included because of file (symbol)
+
+c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_divmodhi4.o)
+                              ./device/uart0.o (__divmodhi4)
+c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodsi4.o)
+                              ./device/uart0.o (__udivmodsi4)
+c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+                              c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o (exit)
+c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+                              ./device/timer2.o (__do_clear_bss)
+c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_ctors.o)
+                              ./device/timer2.o (__do_global_ctors)
+c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodhi4.o)
+                              c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_divmodhi4.o) (__udivmodhi4)
+c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_tablejump.o)
+                              c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_ctors.o) (__tablejump__)
+c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(ultoa.o)
+                              ./main.o (ultoa)
+c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(strrev.o)
+                              c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(ultoa.o) (strrev)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+LOAD ./utils/fifo.o
+LOAD ./device/gpio.o
+LOAD ./device/timer2.o
+LOAD ./device/uart0.o
+LOAD ./main.o
+LOAD c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a
+LOAD c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libm.a
+LOAD c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a
+LOAD c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a
+LOAD c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0x8b0
+ *(.vectors)
+ .vectors       0x00000000       0x94 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000094                . = ALIGN (0x2)
+                0x00000094                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000094        0x0 linker stubs
+ *(.trampolines*)
+                0x00000094                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000094                __ctors_start = .
+ *(.ctors)
+ .ctors         0x00000094        0x2 ./device/timer2.o
+ .ctors         0x00000096        0x2 ./device/uart0.o
+ .ctors         0x00000098        0x2 ./main.o
+                0x0000009a                __ctors_end = .
+                0x0000009a                __dtors_start = .
+ *(.dtors)
+                0x0000009a                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000009a        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+                0x0000009a                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000009a        0xc c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000000a6       0x1a c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+                0x000000a6                __do_copy_data
+ .init4         0x000000c0       0x10 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+                0x000000c0                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ .init6         0x000000d0       0x16 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_ctors.o)
+                0x000000d0                __do_global_ctors
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000e6        0x8 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+ *(.init9)
+ *(.text)
+ .text          0x000000ee        0x4 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+                0x000000ee                __vector_28
+                0x000000ee                __vector_1
+                0x000000ee                __vector_32
+                0x000000ee                __vector_34
+                0x000000ee                __vector_24
+                0x000000ee                __vector_12
+                0x000000ee                __bad_interrupt
+                0x000000ee                __vector_6
+                0x000000ee                __vector_31
+                0x000000ee                __vector_35
+                0x000000ee                __vector_3
+                0x000000ee                __vector_23
+                0x000000ee                __vector_30
+                0x000000ee                __vector_25
+                0x000000ee                __vector_11
+                0x000000ee                __vector_13
+                0x000000ee                __vector_17
+                0x000000ee                __vector_19
+                0x000000ee                __vector_7
+                0x000000ee                __vector_27
+                0x000000ee                __vector_5
+                0x000000ee                __vector_33
+                0x000000ee                __vector_4
+                0x000000ee                __vector_9
+                0x000000ee                __vector_2
+                0x000000ee                __vector_15
+                0x000000ee                __vector_36
+                0x000000ee                __vector_29
+                0x000000ee                __vector_8
+                0x000000ee                __vector_26
+                0x000000ee                __vector_14
+                0x000000ee                __vector_16
+                0x000000ee                __vector_18
+                0x000000ee                __vector_20
+ .text          0x000000f2        0x0 ./utils/fifo.o
+ .text          0x000000f2      0x13a ./device/gpio.o
+                0x000000f2                GPIO::GPIO(char, char)
+                0x0000020e                GPIO::SetOutput()
+                0x000001ee                GPIO::SetInput()
+                0x00000170                GPIO::GPIO(char, char)
+ .text          0x0000022c       0xec ./device/timer2.o
+                0x0000027c                CTimer2::CTimer2()
+                0x0000022c                CTimer2::CTimer2()
+                0x000002cc                CTimer2::get_timer(unsigned int&)
+                0x000002da                __vector_10
+ .text          0x00000318      0x332 ./device/uart0.o
+                0x00000534                __vector_22
+                0x000005c0                Uart0::GetChar(unsigned char&)
+                0x000003b0                Uart0::GetIntStat(unsigned int&)
+                0x000005f4                Uart0::read(unsigned char&)
+                0x000003d4                CBuffer<unsigned char, 20>::Put(unsigned char const&)
+                0x00000318                Uart0::SetBaudRate(unsigned long)
+                0x00000392                Uart0::Uart0(unsigned long)
+                0x000003be                CBuffer<unsigned char, 20>::Inc(int&)
+                0x00000374                Uart0::Uart0(unsigned long)
+                0x0000044c                __vector_21
+                0x000004c0                Uart0::PutChar(unsigned char)
+ .text          0x0000064a      0x15a ./main.o
+                0x000006ac                main
+                0x00000658                Uart0::operator<<(char*)
+ .text          0x000007a4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_divmodhi4.o)
+ .text          0x000007a4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodsi4.o)
+ .text          0x000007a4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ .text          0x000007a4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+ .text          0x000007a4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_ctors.o)
+ .text          0x000007a4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodhi4.o)
+ .text          0x000007a4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_tablejump.o)
+ .text          0x000007a4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(ultoa.o)
+ .text          0x000007a4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(strrev.o)
+                0x000007a4                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x000007a4       0x26 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_divmodhi4.o)
+                0x000007a4                __divmodhi4
+                0x000007a4                _div
+ .text.libgcc   0x000007ca       0x44 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodsi4.o)
+                0x000007ca                __udivmodsi4
+ .text.libgcc   0x0000080e        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ .text.libgcc   0x0000080e        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000080e        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_ctors.o)
+ .text.libgcc   0x0000080e       0x28 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodhi4.o)
+                0x0000080e                __udivmodhi4
+ .text.libgcc   0x00000836        0xc c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_tablejump.o)
+                0x0000083a                __tablejump__
+                0x00000836                __tablejump2__
+ .text.avr-libc
+                0x00000842       0x4a c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(ultoa.o)
+                0x00000842                ultoa
+ .text.avr-libc
+                0x0000088c       0x20 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(strrev.o)
+                0x0000088c                strrev
+                0x000008ac                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000008ac        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+                0x000008ac                exit
+                0x000008ac                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000008ac        0x4 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ *(.fini0)
+                0x000008b0                _etext = .
+
+.data           0x00800100        0xa load address 0x000008b0
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+ .data          0x00800100        0x0 ./utils/fifo.o
+ .data          0x00800100        0x0 ./device/gpio.o
+ .data          0x00800100        0x0 ./device/timer2.o
+ .data          0x00800100        0x0 ./device/uart0.o
+ .data          0x00800100        0xa ./main.o
+ .data          0x0080010a        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_divmodhi4.o)
+ .data          0x0080010a        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodsi4.o)
+ .data          0x0080010a        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ .data          0x0080010a        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+ .data          0x0080010a        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_ctors.o)
+ .data          0x0080010a        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodhi4.o)
+ .data          0x0080010a        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_tablejump.o)
+ .data          0x0080010a        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(ultoa.o)
+ .data          0x0080010a        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(strrev.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0080010a                . = ALIGN (0x2)
+                0x0080010a                _edata = .
+                0x0080010a                PROVIDE (__data_end, .)
+
+.bss            0x0080010a       0x3c
+                0x0080010a                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080010a        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+ .bss           0x0080010a        0x0 ./utils/fifo.o
+ .bss           0x0080010a        0x0 ./device/gpio.o
+ .bss           0x0080010a        0x2 ./device/timer2.o
+                0x0080010a                t_Timer2
+ .bss           0x0080010c       0x32 ./device/uart0.o
+ .bss           0x0080013e        0x8 ./main.o
+                0x0080013e                g_led
+ .bss           0x00800146        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_divmodhi4.o)
+ .bss           0x00800146        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodsi4.o)
+ .bss           0x00800146        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ .bss           0x00800146        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+ .bss           0x00800146        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_ctors.o)
+ .bss           0x00800146        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodhi4.o)
+ .bss           0x00800146        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_tablejump.o)
+ .bss           0x00800146        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(ultoa.o)
+ .bss           0x00800146        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(strrev.o)
+ *(.bss*)
+ *(COMMON)
+                0x00800146                PROVIDE (__bss_end, .)
+                0x000008b0                __data_load_start = LOADADDR (.data)
+                0x000008ba                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800146        0x0
+                0x00800146                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800146                PROVIDE (__noinit_end, .)
+                0x00800146                _end = .
+                0x00800146                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(cpp004.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+CBuffer<unsigned char, 20>::Inc(int&)             ./device/uart0.o
+CBuffer<unsigned char, 20>::Put(unsigned char const&) ./device/uart0.o
+CTimer2::CTimer2()                                ./device/timer2.o
+CTimer2::CTimer2()                                ./device/timer2.o
+CTimer2::get_timer(unsigned int&)                 ./device/timer2.o
+GPIO::GPIO(char, char)                            ./device/gpio.o
+GPIO::GPIO(char, char)                            ./device/gpio.o
+                                                  ./main.o
+GPIO::SetInput()                                  ./device/gpio.o
+GPIO::SetOutput()                                 ./device/gpio.o
+                                                  ./main.o
+Uart0::GetChar(unsigned char&)                    ./device/uart0.o
+Uart0::GetIntStat(unsigned int&)                  ./device/uart0.o
+Uart0::PutChar(unsigned char)                     ./device/uart0.o
+                                                  ./main.o
+Uart0::SetBaudRate(unsigned long)                 ./device/uart0.o
+Uart0::Uart0(unsigned long)                       ./device/uart0.o
+Uart0::Uart0(unsigned long)                       ./device/uart0.o
+                                                  ./main.o
+Uart0::operator<<(char*)                          ./main.o
+Uart0::read(unsigned char&)                       ./device/uart0.o
+                                                  ./main.o
+__bad_interrupt                                   c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__bss_end                                         c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+__bss_start                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+__ctors_end                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_ctors.o)
+__ctors_start                                     c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_ctors.o)
+__data_end                                        c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__data_load_start                                 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__data_start                                      c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__divmodhi4                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_divmodhi4.o)
+                                                  ./device/uart0.o
+__do_clear_bss                                    c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+                                                  ./main.o
+                                                  ./device/uart0.o
+                                                  ./device/timer2.o
+__do_copy_data                                    c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+                                                  ./main.o
+__do_global_ctors                                 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_ctors.o)
+                                                  ./main.o
+                                                  ./device/uart0.o
+                                                  ./device/timer2.o
+__heap_end                                        c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__init                                            c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__stack                                           c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__tablejump2__                                    c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_tablejump.o)
+__tablejump__                                     c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_tablejump.o)
+                                                  c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_ctors.o)
+__udivmodhi4                                      c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodhi4.o)
+                                                  c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_divmodhi4.o)
+__udivmodsi4                                      c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodsi4.o)
+                                                  c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(ultoa.o)
+                                                  ./device/uart0.o
+__vector_1                                        c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_10                                       ./device/timer2.o
+                                                  c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_11                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_12                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_13                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_14                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_15                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_16                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_17                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_18                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_19                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_2                                        c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_20                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_21                                       ./device/uart0.o
+                                                  c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_22                                       ./device/uart0.o
+                                                  c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_23                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_24                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_25                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_26                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_27                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_28                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_29                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_3                                        c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_30                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_31                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_32                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_33                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_34                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_35                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_36                                       c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_4                                        c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_5                                        c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_6                                        c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_7                                        c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_8                                        c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_9                                        c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vector_default                                  c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+__vectors                                         c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+_div                                              c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_divmodhi4.o)
+_exit                                             c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+exit                                              c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+                                                  c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+g_led                                             ./main.o
+main                                              ./main.o
+                                                  c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtcan128.o
+strrev                                            c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(strrev.o)
+                                                  c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(ultoa.o)
+t_Timer2                                          ./device/timer2.o
+ultoa                                             c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(ultoa.o)
+                                                  ./main.o
